@@ -36,7 +36,7 @@ import styled, { keyframes } from 'styled-components';
 
 const fadeUp = keyframes`
 0% { opacity: 0; transform: translateY(20px); }
-100% { opacity: 1; transform: translateY(0); }
+100% { opacity: 0.85; transform: translateY(0); }
 `;
 
 const Section = styled.section`
@@ -45,7 +45,7 @@ max-width: 800px;
 margin: auto;
 text-align: center;
 background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('/images/bg-letter.jpg') center/cover no-repeat;
-color: #5a3e36;
+color: #000000;
 animation: ${fadeUp} 0.8s ease forwards;
 `;
 

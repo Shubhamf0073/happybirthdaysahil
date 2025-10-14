@@ -3,8 +3,9 @@ import { useState } from 'react';
 
 const images = ['/images/her1.jpg','/images/her2.jpg','/images/her3.jpg','/images/her4.jpg'];
 const whispers = [
-"I still remember your laugh… it stays with me.",
-"You’re my favorite thought today and every day.",
+"Since you like my photos, here's one with a little birthday cheer just for you! Happy Birthday, Sahil! Hope you have the best day",
+"Me and my little co-pilot on a mission today... celebrating you! Happy Birthday to my favorite person. 🧸✨",
+"Just me, some flowers, and a whole lot of love for the birthday boy.",
 "Even across miles, you feel so close to my heart."
 ];
 
@@ -92,23 +93,24 @@ border-radius: 5px;
 `;
 
 export default function Gallery() {
-const [selected, setSelected] = useState(null);
-return (
-<GallerySection>
-<GalleryHeading>Memories I treasure with you 💖</GalleryHeading>
-<ImgWrapper>
-{images.map((img, idx) => (
-<Img key={idx} src={img} alt={`photo-${idx}`} onClick={() => setSelected(img)} />
-))}
-</ImgWrapper>
-<Overlay show={selected}>
-{selected && (
-<Popup bg={selected}>
-<WhisperText>{whispers[Math.floor(Math.random() * whispers.length)]}</WhisperText>
-<CloseBtn onClick={() => setSelected(null)}>×</CloseBtn>
-</Popup>
-)}
-</Overlay>
-</GallerySection>
-);
+  const [selectedIndex, setSelectedIndex] = useState(null);
+
+  return (
+    <GallerySection>
+      <GalleryHeading>Memories I treasure with you 💖</GalleryHeading>
+      <ImgWrapper>
+        {images.map((img, idx) => (
+          <Img key={idx} src={img} alt={`photo-${idx}`} onClick={() => setSelectedIndex(idx)} />
+        ))}
+      </ImgWrapper>
+      <Overlay show={selectedIndex !== null}>
+        {selectedIndex !== null && (
+          <Popup bg={images[selectedIndex]}>
+            <WhisperText>{whispers[selectedIndex]}</WhisperText>
+            <CloseBtn onClick={() => setSelectedIndex(null)}>×</CloseBtn>
+          </Popup>
+        )}
+      </Overlay>
+    </GallerySection>
+  );
 }
