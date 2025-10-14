@@ -36,10 +36,10 @@ color: #000000;
 export default function Footer() {
 return (
 <FooterSection>
-<p>To Sahil, may your day be as magical as you are.</p>
+<p>May your day, week, month, year, lifetime, and beyond be as magical as you are.</p>
 <p>Thank you for being the light in my story.</p>
 <p><strong>I'll see you when I see you</strong></p>
-<p><em>Forever yours,<br/>Chandni</em></p>
+<p><strong><em>Forever yours,<br/>Chandni</em></strong></p>
 </FooterSection>
 );
 }

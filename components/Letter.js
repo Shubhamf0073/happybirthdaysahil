@@ -52,7 +52,7 @@ animation: ${fadeUp} 0.8s ease forwards;
 export default function Letter() {
   return (
     <Section>
-      <h2>My Dearest Sahil</h2>
+      <h2><em>My Dearest Sahil</em></h2>
       
       <p>
         If love had a shape, I think mine would look a lot like <strong>you</strong> - quiet, steady, always there even when distance pretends it’s winning. I don’t know when it happened, when childhood jokes turned into <em>heartbeats that refuse to calm down</em> whenever your name shows up on my screen, but it did… and now everything feels a little empty without you in it.

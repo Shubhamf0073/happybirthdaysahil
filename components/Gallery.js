@@ -97,7 +97,7 @@ export default function Gallery() {
 
   return (
     <GallerySection>
-      <GalleryHeading>Memories I treasure with you 💖</GalleryHeading>
+      <GalleryHeading><em>Memories I treasure with you</em></GalleryHeading>
       <ImgWrapper>
         {images.map((img, idx) => (
           <Img key={idx} src={img} alt={`photo-${idx}`} onClick={() => setSelectedIndex(idx)} />

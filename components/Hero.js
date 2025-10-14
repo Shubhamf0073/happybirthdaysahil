@@ -47,8 +47,8 @@ animation: ${drift} ${props => props.$duration}s ease-in-out infinite;
 export default function Hero() {
 return (
 <HeroSection>
-<Heading>Happy Birthday to the Ravenclaw who cast Accio Heart on mine</Heading>
-<SubHeading>By Chandni, Duh!</SubHeading>
+<Heading><em>Happy Birthday to the Ravenclaw who cast Accio Heart on mine</em></Heading>
+<SubHeading><em>By Chandni, Duh!</em></SubHeading>
 {[...Array(20)].map((_, i) => (
 <Sparkle
 key={i}

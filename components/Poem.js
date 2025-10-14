@@ -52,7 +52,7 @@ animation: ${fadeUp} 0.8s ease forwards;
 export default function Poem() {
   return (
     <Section>
-      <h2>I’ll see you when I see you 🌸</h2>
+      <h2><em>I’ll see you when I see you 🌸</em></h2>
       
       <p>
         If love had form, <strong>I’d trace your name,</strong><br/>
