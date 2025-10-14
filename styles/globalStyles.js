@@ -7,6 +7,7 @@ padding: 0;
 font-family: 'Cormorant Garamond', serif;
 background-color: #fff8f0;
 color: #3a3a3a;
+scroll-behavior: smooth;
 }
 h1, h2, h3 {
 font-family: 'Playfair Display', serif;
@@ -16,4 +17,5 @@ p {
 line-height: 1.6;
 margin-bottom: 1em;
 }
+a { text-decoration: none; }
 `;

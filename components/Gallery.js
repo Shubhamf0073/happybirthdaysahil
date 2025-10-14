@@ -2,13 +2,31 @@ import styled, { keyframes } from 'styled-components';
 import { useState } from 'react';
 
 const images = ['/images/her1.jpg','/images/her2.jpg','/images/her3.jpg','/images/her4.jpg'];
+const whispers = [
+"I still remember your laugh… it stays with me.",
+"You’re my favorite thought today and every day.",
+"Even across miles, you feel so close to my heart."
+];
 
 const GallerySection = styled.section`
-padding: 50px 0;
+padding: 50px 20px;
 display: flex;
+flex-direction: column;
+align-items: center;
+`;
+
+const GalleryHeading = styled.h2`
+text-align: center;
+font-size: 2rem;
+margin-bottom: 40px;
+color: #7a4e5a;
+`;
+
+const ImgWrapper = styled.div`
+display: flex;
+flex-wrap: wrap;
 justify-content: center;
 gap: 20px;
-flex-wrap: wrap;
 `;
 
 const Img = styled.img`
@@ -76,20 +94,21 @@ border-radius: 5px;
 export default function Gallery() {
 const [selected, setSelected] = useState(null);
 return (
-<>
 <GallerySection>
+<GalleryHeading>Memories I treasure with you 💖</GalleryHeading>
+<ImgWrapper>
 {images.map((img, idx) => (
 <Img key={idx} src={img} alt={`photo-${idx}`} onClick={() => setSelected(img)} />
 ))}
-</GallerySection>
+</ImgWrapper>
 <Overlay show={selected}>
 {selected && (
 <Popup bg={selected}>
-<WhisperText>Whisper...</WhisperText>
+<WhisperText>{whispers[Math.floor(Math.random() * whispers.length)]}</WhisperText>
 <CloseBtn onClick={() => setSelected(null)}>×</CloseBtn>
 </Popup>
 )}
 </Overlay>
-</>
+</GallerySection>
 );
 }
