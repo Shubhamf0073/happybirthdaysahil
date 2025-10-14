@@ -30,7 +30,7 @@ const FooterSection = styled.footer`
 padding: 60px 20px;
 background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url('/images/bg-footer.jpg') center/cover no-repeat;
 text-align: center;
-color: #5a3e36;
+color: #000000;
 `;
 
 export default function Footer() {
